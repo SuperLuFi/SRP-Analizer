@@ -16,7 +16,7 @@ spm = st.sidebar.number_input("Stroke Per Minute (SPM)", 1, 60, 15)
 # Tombol reset
 if st.sidebar.button("🔄 Reset"):
     window, poly, spm = 11, 2, 15
-    st.experimental_rerun()
+    st.rerun()
 
 st.title("📊 Sucker Rod Pump Analyzer Dashboard")
 
