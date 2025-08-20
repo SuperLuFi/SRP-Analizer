@@ -48,7 +48,7 @@ if uploaded_file:
     col1, col2, col3 = st.columns(3)
     col1.metric("Stroke Volume", f"{stroke_vol:,.2f} bbl")
     col2.metric("Rate", f"{vol_per_min:,.0f} bbl/min")
-    col3.metric("Est. Hourly Volume", f"{total_volume:,.0f} bbl/hr")
+    col3.metric("Est. Hourly Volume", f"{total_vol:,.0f} bbl/hr")
 
     # --- Diagnosis ---
     diff = np.abs(Fs - Fd).mean()
