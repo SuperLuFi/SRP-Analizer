@@ -45,10 +45,9 @@ if uploaded_file:
     total_vol = vol_per_min * 60  # asumsi per jam
 
     st.subheader("📈 Hasil Analisis")
-    col1, col2, col3 = st.columns(3)
-    col1.metric("Stroke Volume", f"{stroke_vol:.2f} units³")
-    col2.metric("Rate (per min)", f"{vol_per_min:.2f} units³/min")
-    col3.metric("Est. Hourly Volume", f"{total_vol:.2f} units³/hr")
+    col1.metric("Stroke Volume", f"{stroke_volume:,.2f} bbl")
+    col2.metric("Rate", f"{rate_per_min:,.0f} bbl/min")
+    col3.metric("Est. Hourly Volume", f"{hourly_volume:,.0f} bbl/hr")
 
     # --- Diagnosis ---
     diff = np.abs(Fs - Fd).mean()
